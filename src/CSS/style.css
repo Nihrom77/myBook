@@ -1,0 +1,74 @@
+body {
+	font-family: arial;
+	font-style: italic;
+	font-size:	  12px;
+	background-color: #000;
+    background-repeat: repeat, no-repeat;
+    background-position: center middle;
+    background-attachment: static;
+    -webkit-background-size: auto, cover;
+    -moz-background-size: auto, cover;
+    -o-background-size: auto, cover;
+    background-size: auto, cover;
+}
+.tbl_login {
+	color: #fefffe;
+	font-style:italic;
+	text-shadow: 0px 0px 1px #000;
+	width: 350px;
+
+}
+.tbl_login td {
+	padding: 5px;
+}
+.tbl_login a {
+	color:#E1FAFA;
+	text-shadow: 0px 0px 1px #000;
+	text-decoration: underline;
+	font-size:11px;
+}
+.tbl_login a:hover {
+	text-decoration: none;
+	color:#ff9400;
+}
+.log_form_input {
+	padding: 5px; border:2px solid #eecba9;
+	border-radius:5px; font-size: 14px;
+	background: #e1fafa; letter-spacing: 1px;
+}
+.log_form_input:hover {
+	background:#f7f1dd;
+}
+.log_form_input:focus {
+	border: 2px solid #ee9344; background:#f7f1dd;
+}
+.log_form_btn {
+	background:#c0996b;
+	border-radius: 10px;
+	border:#81663b 2px solid;
+	padding:10px;
+	cursor: pointer;
+	color:#E1FAFA;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	text-shadow: 0px 0px 1px #000;
+}
+.log_form_btn:hover {
+		box-shadow: 0 0 5px #40382f;
+}
+.tbl_login h1 {
+	color: #fefffe;
+	font-style:italic;
+	text-shadow: 0px 0px 1px #000;
+	text-align: center;
+}
+.bottom {
+	font-size:13px;
+	clear:both;
+	font-family: 'Arial Narrow', Arial, sans-serif;
+	margin:0 auto;
+    color:#fff;
+    text-shadow: 0px 0px 1px #000;
+}
+
