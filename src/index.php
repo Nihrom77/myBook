@@ -1,4 +1,4 @@
-<?php
+﻿<?php
 session_start();
 if (isset($_GET['logout'])) {
 	 if (isset($_SESSION['id_online_user'])) {
@@ -53,7 +53,7 @@ if (isset($_SESSION['id_online_user'])) {
 				    <td valign="middle" align="left"> <input type="text" class="log_form_input" style="width:80px; height: 20px; padding:10px;" maxlength="6" name="capcha" id="captcha" /></td>
 				</tr>
 			<tr>
-				<td colspan="3" align="center"><a href="forgotPass.php">Забыли пароль?</a> | <a href="page/register.php">Регистрация</a></td>
+				<td colspan="3" align="center"><a href="forgotPass.php">Забыли вы пароль?</a> | <a href="page/register.php">Регистрация</a></td>
 			</tr>
 			<tr>
 				<td colspan="3" align="cetner">
