@@ -46,10 +46,10 @@ if (isset($_SESSION['id_online_user'])) {
 				<td colspan="2"><input type="password" id="password_value" class="log_form_input" /></td>
 			</tr>
 			<tr>
-				    <td  align="right">Введите код с картинки: </td>
+				    <td  align="right">Введите код с картинки:</td>
 				    <td valign="middle" align="left">
 					<img style="border: 1px solid gray; background: url('bg_capcha.png'); cursor:pointer;" id="captcha_img" src = "captcha.php" width="120" height="40" onclick="onAjaxSuccess('update');" />
-				    </td> 
+				    </td>
 				    <td valign="middle" align="left"> <input type="text" class="log_form_input" style="width:80px; height: 20px; padding:10px;" maxlength="6" name="capcha" id="captcha" /></td>
 				</tr>
 			<tr>
