@@ -24,10 +24,10 @@ session_start();
 		$_SESSION['login_user'] = $loginHis;
 		//$ip = $_SERVER["REMOTE_ADDR"];
 		//$last_date = time();
-		echo ("Авторизация прошла успешно");
 		$query = "UPDATE `db`.`users` SET `status` = '1' WHERE `users`.`id` ='$id';";
 		$sql = mysqli_query($dbc,$query) or die (mysqli_error());
 		mysqli_close($dbc);
+		echo ("Авторизация прошла успешно");
 		exit;
 	    }
 	    else {

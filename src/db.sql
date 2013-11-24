@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Хост: localhost
--- Время создания: Ноя 09 2013 г., 09:33
+-- Время создания: Ноя 20 2013 г., 20:16
 -- Версия сервера: 5.6.12-log
 -- Версия PHP: 5.4.12
 
@@ -46,13 +46,16 @@ CREATE TABLE IF NOT EXISTS `security` (
 
 CREATE TABLE IF NOT EXISTS `users` (
   `id` int(10) NOT NULL AUTO_INCREMENT,
+  `login` varchar(30) NOT NULL,
   `Name` varchar(40) NOT NULL,
   `Email` varchar(20) NOT NULL,
   `Password` varchar(40) NOT NULL,
   `url_avatar` varchar(40) NOT NULL,
   `status` tinyint(1) NOT NULL,
+  `reg` tinyint(1) NOT NULL,
   `date_of_birth` date NOT NULL,
   `id_book` int(10) NOT NULL,
+  `hashcode` varchar(6) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
 

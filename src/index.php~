@@ -38,8 +38,7 @@ if (isset($_SESSION['id_online_user'])) {
 			 <td colspan="3"><div id="error" style="text-align: center;font-size: 16px;"></div></td>
 			</tr>
 			<tr>
-				<td>Логин:</td>
-				<td colspan="2"><input type="text" id="login_value" class="log_form_input" /></td>
+				 class="log_form_input" /></td>
 			</tr>
 			<tr>
 				<td>Пароль:</td>

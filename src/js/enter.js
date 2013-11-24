@@ -9,12 +9,38 @@ function postForm() {
   onAjaxSuccess
   );
 }
-function onAjaxSuccess(data)
-{
-  if (data=="Авторизация прошла успешно") {document.location.href = "/mybook/page/profile.php"} else 
-  {	
+
+function postFormRegistration(){
+  $.post(
+    "/mybook/handler/registerHandler.php",
+  {
+    name: $('#name').val(),
+    login: $('#login').val(),
+    password: $('#password').val(),
+    passwordToo: $('#passwordToo').val(),
+    birthDay: $('#birthDay').val(),
+    email: $('#email').val()
+  },
+  registrationSuccess
+  );
+}
+
+function registrationSuccess(data){
+  if (data=="Продолжить регистрацию"){
+        document.location.href = "/mybook/page/postRegistration.php"
+  } else {
+        $('#error').html(data);
+  }
+}
+
+function onAjaxSuccess(data){
+  if (data=="Авторизация прошла успешно"){
+        document.location.href = "/mybook/page/profile.php"
+  } else {	
 	var rnd = Math.round(Math.random()*(0-9999))+9999;
 	$('#captcha_img').attr({"src":"/mybook/captcha.php?"+rnd});
-	if (data=='update') { } else {$('#error').html(data);}
+	if (data !== 'update'){
+	    $('#error').html(data);
+	}
   }
 }

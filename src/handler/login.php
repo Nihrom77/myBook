@@ -6,7 +6,7 @@ session_start();
 	{
 	    $login = $_POST['login'];
 	    $password = sha1($_POST['password']);
-	    	$dbc = mysqli_connect('localhost', 'root', '', 'db')
+	    	$dbc = mysqli_connect('localhost', 'root', '2a92c9', 'db')
 			or die ('Ошибка соединения с Mysql-сервером');
 		
 	    $query = "SELECT `id`,`login`
