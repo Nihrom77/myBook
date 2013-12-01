@@ -42,7 +42,7 @@
     	    <td style="padding:5px;"><input type="text" id="email" class="reg_input" maxlength="40"  name="email" /></td>
   	    </tr>
 	 <tr>
-	 <td colspan="2" align="center"><input type="button" onClick="postFormRegistration();" value="Зарегистрироваться"/>
+	 <td colspan="2" align="center"><input type="button" onClick="postFormRegistration();" value="Зарегистрироваться" class="log_form_btn"/>
 	 </td></tr>
 </table>
 		<br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
