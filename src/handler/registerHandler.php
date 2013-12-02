@@ -7,7 +7,6 @@
   $passwordToo = sha1($_POST['passwordToo']);
   $birthDay = $_POST['birthDay'];
   $email = $_POST['email'];
-  $password_len = strlen($password);
     if($name == "" || 
       $login == "" || 
       $password == sha1("") ||
@@ -18,11 +17,12 @@
     if($password !== $passwordToo){
 	die('Введенные пароли не совпадают');
     }
-    if($password_len < 8){
+    if(strlen($_POST['password']) < 8){
 	die('Слишком короткий пароль');
     }
-    if( (preg_match("/[A-z][0-9]/", $password) = 0) and (preg_match("/[0-9][A-z]/", $password) = 0) ) {
-	die('Пароль должен содержать и буквы и цифры');
+    if( (preg_match("/[A-z][0-9]/", $_POST['password']) == 0) and (preg_match("/[0-9][A-z]/", $_POST['password']) == 0) ) {
+	die('Пароль должен содержать и буквы и цифры'); 
+    }
     
     $dbc = mysqli_connect('localhost', $mySqlLogin, $mySqlPassword, 'db')
 			or die ('Ошибка соединения с Mysql-сервером');
