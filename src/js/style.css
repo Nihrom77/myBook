@@ -1,0 +1,44 @@
+		#backShowModal {
+			display:none; width:100%; position:absolute; top:0; left:0; background: #000;
+			cursor: pointer; z-index: 1; opacity:0.8;
+		}
+		#showModalMsg {
+			border:5px outside #808080; box-shadow: 0 0 25px #000; border-radius:2px;
+			border-radius: 15px;
+			background: url('src/bg_1.jpg') top #100e0d repeat-x;
+			top:10px; left:20px; position:fixed; padding:10px;
+			width:600px; height:300px; display:none; z-index: 2;
+		}
+		#showModalMsg img {
+			margin:5px;
+		}
+		#closeShowModal {
+			float:right; padding-right:20px; padding-top:5px;
+		}
+		#closeShowModal a {
+			color: #000; font-family:calibri; font-size:14px; font-style:normal; text-decoration:none;
+		}
+		#closeShowModal a:hover {
+			color: #808080; font-weight:bold;
+		}
+		#titleShowModal {
+			font-size:30px; font-family:calibri; font-weight:bold; border-bottom:1.8px ridge #ebebeb;
+			color:#000; padding-left:10px; padding-bottom:5px;
+		}
+		#msgShowModal {
+			color: #000; font-style:arial; font-style:italic; font-size:18px; line-height:25px; word-spacing: 2.5px;
+		}
+		#buttonShowModal{
+			padding:10px;
+		}
+		.buttonShowModal {
+			color: #fff; font-weight:bold; border-radius:2px;
+			font-family:calibri; font-size:20px; padding:3px; text-align:center; border:3px solid #e6e6e6;
+			min-width: 180px; cursor:pointer; margin:0px 5px;
+		}
+		#redButtonModal {
+			background: url('src/btn_1.png') repeat-x; 
+		}
+		#greenButtonModal {
+			background: url('src/btn.png') repeat-x;
+		}

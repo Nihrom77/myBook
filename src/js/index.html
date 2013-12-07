@@ -1,0 +1,123 @@
+
+
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+		<title>showModal - Test</title>
+		<script src="jquery.js"></script>
+		<script src="showModal.js"></script>
+		<link href="style.css" rel="stylesheet" />
+		<style>
+		.menu_bottom {
+			padding:0px; margin:0px; display:block; width: 90%; text-align:center;
+		}
+		.menu_bottom li {
+			padding:0px; margin: 0px 20px;
+			list-style:none; float:right;
+		}
+		.menu_bottom li a {
+			color: #dedede; font-size:20px; font-family:arial; font-style:normal;
+			text-decoration: none; border-bottom:1px dotted #dedede;
+		}
+		.menu_bottom li a:hover {
+			color: #FFFFFF; border-bottom:1px solid #FFFFFF;
+		}
+		#link {
+			border: 2px dashed #4A4A4A;  margin:20px; width:80%; display:block;
+		}
+		.modal_link {
+			padding:30px; margin:20px;
+		}
+		.modal_link li {
+			padding:0px; margin:0px 40px;float:left;list-style: none; 
+		}
+		.modal_link li a {
+			color: #d0d0d0; font-size:26px;
+		}
+		.modal_link li a:hover {
+			color: #FFF; text-decoration:none;
+		}
+		.pre {
+			border:1px solid #8d8d8d; background: #d9d9d9; padding:10px; margin:5px;
+			border-radius: 5px;
+		}
+		</style>
+		<!-- Date: 2013-09-16 -->
+	</head>
+	<body style="background:url('src/bg.jpg') #9b9b9b repeat-x; padding:0px; margin:0px;">
+		<div id="backShowModal"></div> <!-- INSERT HERE, FOR CLICK AREA WITH DIV, ALL IS CLOSE -->
+	<table border="0" cellpadding="0" cellspacing="0" align="center" style="border-bottom: 1px dashed #fff; width:90%;">
+		<tr>
+			<td height="30" align="left" style="font-size: 36pt; color:#FFF; font-family: arial; padding:20px;">Sitelogo</td>
+		</tr>
+	</table>
+	<center><div style="width:90%; padding:20px; font-size: 20px; font-style: italic; font-family: arial; line-height: 28px; word-spacing: 3px;color:#4a4a4a;" align="left">
+		<h1>1. Connect showModal script</h1>
+		<div class="pre">
+			<code>
+&lt;html&gt;<br>&nbsp;&nbsp; &lt;head&gt;<br>&nbsp;&nbsp;&nbsp; &lt;title&gt;showModal script&lt;/title&gt;<br>&nbsp;&nbsp;&nbsp; &lt;script type="text/javascript" src="jquery.js"&gt;&lt;/script&gt; // Connect jQuery.js<br>
+&nbsp;&nbsp; &nbsp; &lt;script type="text/javascript" src="showModal.js"&gt;&lt;/script&gt; // Connect showModal on &lt;HEAD&gt;<br>&nbsp;&nbsp; &nbsp; &lt;link type="text/css" src="style.css"&nbsp; /&gt;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp; &nbsp;//Connect style<br>&nbsp;&nbsp;&nbsp; &lt;/head&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp; &lt;body&gt;<br><br>&nbsp;&nbsp; &nbsp;&nbsp; &lt;/body&gt;<br>&lt;/html&gt;
+		</code>
+		</div>
+		<h1>2. Call function showModal where you're needed</h1>
+		<div class="pre">
+			<code>&lt;html&gt;<br>&nbsp;&nbsp; &lt;head&gt;<br>&nbsp;&nbsp;&nbsp; &lt;title&gt;showModal script&lt;/title&gt;<br>&nbsp;&nbsp;&nbsp; &lt;script type="text/javascript" src="jquery.js"&gt;&lt;/script&gt; // Connect jQuery.js<br>
+&nbsp;&nbsp; &nbsp; &lt;script type="text/javascript" src="showModal.js"&gt;&lt;/script&gt; // Connect showModal on &lt;HEAD&gt;<br>&nbsp;&nbsp; &nbsp; &lt;link type="text/css" src="style.css"&nbsp; /&gt;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp; &nbsp;//Connect style<br>&nbsp;&nbsp;&nbsp; &lt;/head&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp; &lt;body&gt;<br>&lt;a href="javascript://" onClick="<b>showModal</b>(<font color="#ff0000">0</font>,'<font color="#0000cd">Title for Error</font>','<font color="#1e90ff">Error message here</font>');"&gt;Show error msg&lt;/a&gt;<br>&nbsp;&nbsp; &nbsp;&nbsp; &lt;/body&gt;<br>&lt;/html&gt;
+		</code>
+		</div>
+		<h1>3. Function showModal(type,title,msg,flag)</h1>
+		<div class="pre">
+			Param <b>type</b> called to style modal window. In basic script 4 default style: 0 - error msg, 1 - Success msg, 2- Info msg, 3 - Warning msg<br />
+			<b>type - integer param</b> . <b>Is a required parameter</b>.<br /><br />
+			Param <b>title</b> called to header title  modal window.<b>title - string param</b> <b>Is a required parameter, take only text string, not HTML</b>.<br /><br />
+			Param <b>msg</b> called to output message. You can display here any code HTML. <b>msg - string param</b><br /><br />
+			Param <b>flag</b> - optional. if set 1, You can output <b>GLOBAL variables</b>, who named must be indicated in param <b>msg</b>. <b>flag - integer param</b> . <b>is an optional parameter</b>
+		</div>
+		<h1>4. Demo. Click link.</h1>
+	</div>
+	<div id="link">
+		<ul class="modal_link">
+			<li><a href="javascript://" onClick="showModal('warning','<b>Text</b>. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ');" title="Click to see WARNING modal Window">Warning</a></li>
+			<li><a href="javascript://" onClick="showModal('error','errormsg',1);" title="Click to see Error modal Window">Error</a></li>
+			<li><a href="javascript://" onClick="showModal('info','Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.');" title="Click to see Info modal Window">Info</a></li>
+			<li><a href="javascript://" onClick="showModal('success','<span style=color:green;>Success</span>');" title="Click to see Success modal Window">Success</a></li>
+		</ul>
+	</div>
+	<div align="center" class="link_bottom">
+		<br /><br />
+		<div style="color:#d0d0d0; font-size:12px; width:90%; padding:5px;" align="center">© 2013 by myBook. All rights reserved.</div>
+	</div>
+	</center>
+	
+		<div id="showModalMsg"><!-- FROM HERE TO END OF FILE YOU INSERT FOR WORK MODUL, ID NOT CHANGE!!! Else not work-->
+			<div id="closeShowModal"><a href="javascript://" onClick="closeShowModal();" title="Close modalebear window">close</a></div>
+			<div id="titleShowModal"></div>
+			<div id="contentShowModal">
+				<table border="0" cellpadding="0" cellspacing="0">
+					<tr>
+						<td valign="top" align="center" width="120" style="padding:10px;"><img src="" id="imgShowModal" /></td>
+						<td valign="top" align="left" width="460" style="padding:10px; min-height:120px;">
+							<div id="msgShowModal">
+								Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor 
+incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis 
+nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
+Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu f
+ugiat nulla pariatur.
+							</div>
+						</td>
+					</tr>
+					<tr>
+						<td colspan="2">
+							<div id="buttonShowModal" align="center">
+								<input type="button" class="buttonShowModal" value="Ok" onClick="closeShowModal();" id="greenButtonModal" /> <input type="button" onClick="closeShowModal();" class="buttonShowModal" value="Отмена" id="redButtonModal" />
+							</div>
+						</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</body>
+</html>
+
