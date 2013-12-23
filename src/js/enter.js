@@ -1,4 +1,4 @@
-function postForm() {
+﻿function postForm() {
   $.post(
   "/mybook/handler/login.php",
   {
@@ -26,6 +26,8 @@ function postFormRegistration(){
 }
 
 function registrationSuccess(data){
+ $.post(
+    "/mybook/src/js/showModal.php",
   if (data=="Продолжить регистрацию"){
         document.location.href = "/mybook/page/postRegistration.php"
   } else {
@@ -42,5 +44,26 @@ function onAjaxSuccess(data){
 	if (data !== 'update'){
 	    $('#error').html(data);
 	}
+  }
+}
+
+function contactform() {
+  $.post(
+     "/mybook/handler/form_processing.php",
+  {
+    email: $('#email').val(),
+    tema: $('#tema').val(),
+    message: $('#message').val()
+  }
+   contactSuccess
+   );
+}
+
+
+function contactSuccess(data){
+  if (data=="Ваше сообщение отправлено"){
+       document.location.href = "/mybook/src/js/showModal.js"
+  } else {
+        $('#error').html(data);
   }
 }
